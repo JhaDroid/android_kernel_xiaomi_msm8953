@@ -157,4 +157,6 @@ config KLAPSE
     help
         A simple rgb dynamic lapsing module similar to LineageOS' livedisplay
 
+=======
+>>>>>>> 684d1bb36c3b... K-lapse v5.0
 endif
