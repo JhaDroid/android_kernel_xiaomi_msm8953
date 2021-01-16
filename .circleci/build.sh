@@ -32,28 +32,28 @@ function compile() {
     mkdir dtb-nontreble
 
     if ! [ -a "$IMAGE" ]; then
-        exit 1
-        echo "There are some issues"
+        echo "There are some issues with image"
+        exit 1        
     fi
     cp $IMAGE $REPACK_DIR/kernel/
 
     if ! [ -a "$DTB" ]; then
-        exit 1
-        echo "There are some issues"
+        echo "There are some issues with DTB"
+        exit 1        
     fi
     cp $DTB $REPACK_DIR/dtb-nontreble/
 
     if ! [ -a "$DTB_T" ]; then
-        exit 1
-        echo "There are some issues"
+        echo "There are some issues with DTB T"
+        exit 1        
     fi
     cp $DTB_T $REPACK_DIR/dtb-treble/
 }
 # Zipping
 function zipping() {
     cd $REPACK_DIR || exit 1
-    zip -r9 Lightning_Kernel-${TANGGAL}.zip *
-    curl https://bashupload.com/Lightning_Kernel-${TANGGAL}.zip --data-binary @Lightning_Kernel-${TANGGAL}.zip
+    zip -r9 tissot-Perf+-${TANGGAL}.zip *
+    curl https://bashupload.com/tissot-Perf+-${TANGGAL}.zip --data-binary @tissot-Perf+-${TANGGAL}.zip
 }
 compile
 zipping
