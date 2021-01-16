@@ -17,6 +17,8 @@ export KBUILD_COMPILER_STRING="$($kernel/clang/bin/clang --version | head -n 1 |
 export ARCH=arm64
 export KBUILD_BUILD_USER=Sudhakar Jha
 export KBUILD_BUILD_HOST=circleci
+
+echo $PATH
 # Compile plox
 function compile() {
     make -j$(nproc) O=out ARCH=arm64 perf-tissot_defconfig
