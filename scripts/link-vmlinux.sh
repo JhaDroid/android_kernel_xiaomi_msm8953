@@ -109,7 +109,9 @@ modpost_link()
 	else
 		info LD vmlinux.o
 	fi
-
+	echo "Test What we are doing"
+	info Test What we are doin
+	echo "${LD} ${LDFLAGS} -r -o ${1} $(modversions) ${objects}" 
 	${LD} ${LDFLAGS} -r -o ${1} $(modversions) ${objects}
 }
 
